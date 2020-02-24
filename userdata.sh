@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo echo "127.0.0.1 `hostname`" >> /etc/hosts
+sudo sh -c "echo '127.0.0.1 `hostname`'  >> /etc/hosts"
 sudo apt-get update -y
 sudo apt-get install mysql-client -y
 sudo apt-get install apache2 apache2-utils -y

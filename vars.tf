@@ -1,6 +1,12 @@
 variable aws_reg {
   description = "This is aws region"
-  default     = "eu-west-1"
+  default     = "ap-northeast-1"
+  type        = "string"
+}
+
+variable aws_profile {
+  description = "This is aws profile"
+  default     = "XXXXXXXXXX"
   type        = "string"
 }
 
@@ -22,6 +28,6 @@ variable dbname {
 }
 
 variable ssh_key {
-  default     = "~/.ssh/id_rsa.pub"
+  default     = "~/.ssh/terraform_wordpress.pub"
   description = "Default pub key"
 }

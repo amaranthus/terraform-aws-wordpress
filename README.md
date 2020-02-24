@@ -21,11 +21,35 @@ Usage:
 provisioning:
 -------------
 
-1. git clone https://github.com/aleti-pavan/terraform-aws-wordpress.git
-2. cd terraform-aws-wordpress
-2. terraform init
-3. terraform plan
-4. terraform apply -auto-approve
+1. cloen repo
+```sh
+git clone https://github.com/amaranthus/terraform-aws-wordpress.git
+```
+
+2. create ssh key(no passphrase)
+```sh
+ssh-keygen -t rsa
+```
+
+3. replace id_rsa with created in 2
+
+4. set vars（aws_profile）
+```sh
+vi vars.tf
+```
+
+5. set secret key in conf.wp-config.php
+```sh
+~/.ssh/terraform_wordpress
+```
+
+6. exec terrform
+```sh
+cd terraform-aws-wordpress
+terraform init
+terraform plan
+terraform apply -auto-approve
+```
 
 Destroying the Infra:
 ---------------------
@@ -34,8 +58,3 @@ Destroying the Infra:
 
 
 
-Change:
------- 
-
-Code slightly changed on 31st May, 2019. 
-I have added providers.tf with versions required for each provider

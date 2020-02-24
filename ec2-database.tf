@@ -57,7 +57,7 @@ resource "aws_instance" "ec2" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("~/.ssh/id_rsa")}"
+      private_key = "${file("~/.ssh/terraform_wordpress")}"
     }
   }
 
@@ -70,7 +70,7 @@ resource "aws_instance" "ec2" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("~/.ssh/id_rsa")}"
+      private_key = "${file("~/.ssh/terraform_wordpress")}"
     }
   }
 
@@ -81,7 +81,7 @@ resource "aws_instance" "ec2" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("~/.ssh/id_rsa")}"
+      private_key = "${file("~/.ssh/terraform_wordpress")}"
     }
   }
 
@@ -93,7 +93,7 @@ resource "aws_instance" "ec2" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("~/.ssh/id_rsa")}"
+      private_key = "${file("~/.ssh/terraform_wordpress")}"
     }
   }
 
