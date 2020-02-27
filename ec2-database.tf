@@ -1,7 +1,7 @@
 
 resource "aws_key_pair" "keypair1" {
   key_name   = "${var.stack}-keypairs"
-  public_key = "${file("${var.ssh_key}")}"
+  public_key = "${file("${var.ssh_public_key}")}"
 }
 
 data "template_file" "phpconfig" {
@@ -57,7 +57,7 @@ resource "aws_instance" "ec2" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("~/.ssh/terraform_wordpress")}"
+      private_key = "${file("${var.ssh_private_key}")}"
     }
   }
 
@@ -70,7 +70,7 @@ resource "aws_instance" "ec2" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("~/.ssh/terraform_wordpress")}"
+      private_key = "${file("${var.ssh_private_key}")}"
     }
   }
 
@@ -81,7 +81,7 @@ resource "aws_instance" "ec2" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("~/.ssh/terraform_wordpress")}"
+      private_key = "${file("${var.ssh_private_key}")}"
     }
   }
 
@@ -93,7 +93,7 @@ resource "aws_instance" "ec2" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("~/.ssh/terraform_wordpress")}"
+      private_key = "${file("${var.ssh_private_key}")}"
     }
   }
 

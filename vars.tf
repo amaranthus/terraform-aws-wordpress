@@ -6,7 +6,7 @@ variable aws_reg {
 
 variable aws_profile {
   description = "This is aws profile"
-  default     = "XXXXXXXXXX"
+  default     = "xxxxxxxxxx"
   type        = "string"
 }
 
@@ -27,7 +27,12 @@ variable dbname {
   description = "db name"
 }
 
-variable ssh_key {
+variable ssh_public_key {
   default     = "~/.ssh/terraform_wordpress.pub"
   description = "Default pub key"
+}
+
+variable ssh_private_key {
+  default     = "~/.ssh/terraform_wordpress"
+  description = "Default private key"
 }

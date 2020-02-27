@@ -26,24 +26,28 @@ provisioning:
 git clone https://github.com/amaranthus/terraform-aws-wordpress.git
 ```
 
-2. create ssh key(no passphrase)
+2. create ssh key
 ```sh
+# passphrase: no
+# path: ~/.ssh/terraform_wordpress
 ssh-keygen -t rsa
 ```
 
-3. replace id_rsa with created in 2
+3. create IAM at AWS Console
 
-4. set vars（aws_profile）
+4. set awscli profile
+
+5. set vars（aws_profile）
 ```sh
 vi vars.tf
 ```
 
-5. set secret key in conf.wp-config.php
+6. set secret key in conf.wp-config.php
 ```sh
 ~/.ssh/terraform_wordpress
 ```
 
-6. exec terrform
+7. exec terrform
 ```sh
 cd terraform-aws-wordpress
 terraform init
@@ -55,6 +59,7 @@ Destroying the Infra:
 ---------------------
 1. cd terraform-aws-wordpress (Be in the repo directory)
 2. terraform destroy -auto-approve
+
 
 
 
