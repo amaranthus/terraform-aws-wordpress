@@ -46,6 +46,7 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
+// 認証用ユニークキー（ログインユーザーのブラウザに保存されるCookie情報を暗号化する時に使うキー）
 define( 'AUTH_KEY',         'put your unique phrase here' );
 define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
 define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
